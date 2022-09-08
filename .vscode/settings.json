@@ -1,0 +1,17 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "cSpell.words": [
+    "bdigital",
+    "bgcolor",
+    "flowtype",
+    "Parens",
+    "precached",
+    "reduxjs",
+    "shdsvn",
+    "webfonts"
+  ]
+}
