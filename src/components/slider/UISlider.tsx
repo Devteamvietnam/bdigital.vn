@@ -21,14 +21,16 @@ export class Slider extends React.Component<SliderProps> {
 
     return (
       <Paper
-        elevation={2}
+        elevation={24}
+        square={true}
         sx={{
           position: 'relative',
+          flexWrap: 'wrap',
           backgroundColor: 'grey.800',
           color: '#fff',
-          mb: 4,
+          mb: 1,
           backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
+          backgroundRepeat: 'repeat',
           backgroundPosition: 'center',
           backgroundImage: `url(${post.image})`
         }}
@@ -52,7 +54,7 @@ export class Slider extends React.Component<SliderProps> {
           }}
         />
         <Grid container>
-          <Grid item md={6}>
+          <Grid item md={4}>
             <Box
               sx={{
                 position: 'relative',

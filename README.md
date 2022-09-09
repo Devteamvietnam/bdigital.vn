@@ -4,11 +4,11 @@
 
 ## Authors
 
-- [@ddthien.dev](https://www.github.com/octokatherine)
+- [@ddthien.dev](https://github.com/deveyy)
 
 ## Demo
 
-- [@Review Demo](https://devteamvietnam.github.io/shdsvn.com/)
+- [@Review Demo](https://devteamvietnam.github.io/bdigital.vn/)
 
 # Project
 
@@ -82,7 +82,7 @@ In this project using
 Clone the project
 
 ```bash
-  git clone https://github.com/Devteamvietnam/shdsvn.com
+  git clone https://github.com/Devteamvietnam/bdigital.vn
 ```
 
 Go to the project directory
