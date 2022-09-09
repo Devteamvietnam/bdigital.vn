@@ -1,6 +1,13 @@
 .App-logo-header {
-  height: 6vmin;
+  height: 7vmin;
   pointer-events: stroke;
+}
+
+@media screen and (max-width: 768px) {
+  .App-logo-header {
+    height: 8vmin;
+    pointer-events: stroke;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

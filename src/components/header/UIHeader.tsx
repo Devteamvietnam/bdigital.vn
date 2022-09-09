@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 
-import logo from '../../assets/images/logo.svg';
+import logo from '../../assets/images/logo.png';
 
 import '../header/style.scss';
 
@@ -69,7 +69,7 @@ export class UIHeader extends Component<HeaderProps> {
           >
             {sections.map(section => (
               <Link
-                color="inherit"
+                color="primary"
                 rel="noopener"
                 underline="none"
                 key={section.title}
