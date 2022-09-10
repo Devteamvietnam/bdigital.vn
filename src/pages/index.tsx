@@ -10,7 +10,7 @@ import GlobalStyles from '@mui/material/GlobalStyles';
 import { AppContext } from '../api';
 
 import { UIHeader } from '../components/header/UIHeader';
-import { Slider } from '../components/slider/UISlider';
+import Swipeable from '../components/slider/UISlider';
 import { UIFooter } from '../components/footer/UIFooter';
 
 export class UIPages extends Component {
@@ -33,19 +33,10 @@ export class UIPages extends Component {
     });
 
     const sections = [
-      { title: 'Home', url: '#', description: '' },
-      { title: 'Showreel', url: '#', description: '' },
-      { title: 'Contact', url: '#', description: '' }
+      { title: 'Home', url: '/bdigital.vn', description: '' },
+      { title: 'Showreel', url: '/bdigital.vn/showreel', description: '' },
+      { title: 'Contact', url: '/bdigital.vn/contact', description: '' }
     ];
-
-    const SliderProps = {
-      title: 'Title of a longer featured blog post',
-      description:
-        'Multiple lines of text that form the vn, informing new readers quickly and efficiently about whats most interesting in this posts contents.',
-      image: 'https://source.unsplash.com/random',
-      imageText: 'main image description',
-      linkText: 'Continue reading…'
-    };
 
     const footer = {
       title: 'Bdigital.vn',
@@ -61,7 +52,7 @@ export class UIPages extends Component {
         <Container maxWidth="xl">
           <UIHeader sections={sections} title={'Bdigital'} />
           <main>
-            <Slider post={SliderProps} />
+            <Swipeable />
           </main>
         </Container>
         <UIFooter
