@@ -1,85 +1,87 @@
-import * as React from 'react';
+import React from 'react';
 import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
+import { useTheme } from '@mui/material/styles';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+import Grid from '@mui/material/Grid';
 
-interface SliderProps {
-  post: {
-    description: string;
-    image: string;
-    imageText: string;
-    linkText: string;
-    title: string;
-  };
-}
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-export class Slider extends React.Component<SliderProps> {
-  render() {
-    const { post } = this.props;
-
-    return (
-      <Paper
-        elevation={24}
-        square={true}
-        sx={{
-          position: 'relative',
-          flexWrap: 'wrap',
-          backgroundColor: 'grey.800',
-          color: '#fff',
-          mb: 1,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'repeat',
-          backgroundPosition: 'center',
-          backgroundImage: `url(${post.image})`
-        }}
-      >
-        {/* Increase the priority of the hero background image */}
-        {
-          <img
-            style={{ display: 'none' }}
-            src={post.image}
-            alt={post.imageText}
-          />
-        }
-        <Box
-          sx={{
-            position: 'absolute',
-            top: 0,
-            bottom: 0,
-            right: 0,
-            left: 0,
-            backgroundColor: 'rgba(0,0,0,.3)'
-          }}
-        />
-        <Grid container>
-          <Grid item md={4}>
-            <Box
-              sx={{
-                position: 'relative',
-                p: { xs: 3, md: 6 },
-                pr: { md: 0 }
-              }}
-            >
-              <Typography
-                component="h1"
-                variant="h3"
-                color="inherit"
-                gutterBottom
-              >
-                {post.title}
-              </Typography>
-              <Typography variant="h5" color="inherit" paragraph>
-                {post.description}
-              </Typography>
-              <Link underline="none" variant="subtitle1" href="#">
-                {post.linkText}
-              </Link>
-            </Box>
-          </Grid>
-        </Grid>
-      </Paper>
-    );
+const images = [
+  {
+    label: 'city-lights',
+    imgPath:
+      'https://c4.wallpaperflare.com/wallpaper/813/588/839/special-effects-city-lights-artwork-electricity-wallpaper-preview.jpg'
+  },
+  {
+    label: 'winter-snow',
+    imgPath:
+      'https://c4.wallpaperflare.com/wallpaper/870/315/584/winter-snow-night-house-wallpaper-preview.jpg'
+  },
+  {
+    label: 'wp3648303',
+    imgPath: 'https://wallpapercave.com/wp/wp3648303.jpg'
+  },
+  {
+    label: '2050159',
+    imgPath: 'https://wallpaperaccess.com/full/2050159.jpg'
   }
+];
+
+function Swipeable() {
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
+
+  const handleStepChange = (step: number) => {
+    setActiveStep(step);
+  };
+
+  return (
+    <Paper
+      elevation={24}
+      square={true}
+      sx={{
+        position: 'relative',
+        flexWrap: 'wrap',
+        backgroundColor: 'grey.800',
+        color: '#fff',
+        mb: 2,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center'
+      }}
+    >
+      <Grid container>
+        <Grid md={12}>
+          <AutoPlaySwipeableViews
+            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+            index={activeStep}
+            onChangeIndex={handleStepChange}
+            enableMouseEvents
+          >
+            {images.map((step, index) => (
+              <div key={step.label}>
+                {Math.abs(activeStep - index) <= 2 ? (
+                  <Box
+                    component="img"
+                    sx={{
+                      display: 'block',
+                      height: 490,
+                      overflow: 'hidden',
+                      width: '100%'
+                    }}
+                    src={step.imgPath}
+                    alt={step.label}
+                  />
+                ) : null}
+              </div>
+            ))}
+          </AutoPlaySwipeableViews>
+        </Grid>
+      </Grid>
+    </Paper>
+  );
 }
+
+export default Swipeable;
