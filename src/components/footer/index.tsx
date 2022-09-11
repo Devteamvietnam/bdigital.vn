@@ -1,0 +1,1 @@
+export { UIFooter } from './UIFooter';

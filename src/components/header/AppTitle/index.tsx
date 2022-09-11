@@ -1,0 +1,1 @@
+export { AppTitle } from './AppTitle';
