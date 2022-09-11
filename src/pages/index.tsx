@@ -12,6 +12,8 @@ import { AppContext } from '../api';
 import { UIHeader } from '../components/header/UIHeader';
 import Swipeable from '../components/slider/UISlider';
 import { UIFooter } from '../components/footer/UIFooter';
+import { UIShowreel } from '../pages/showreel';
+import { UIContact } from '../pages/contact';
 
 export class UIPages extends Component {
   appContext: AppContext;

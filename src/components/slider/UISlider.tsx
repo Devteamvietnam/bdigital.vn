@@ -67,7 +67,7 @@ function Swipeable() {
                     component="img"
                     sx={{
                       display: 'block',
-                      height: 490,
+                      height: 500,
                       overflow: 'hidden',
                       width: '100%'
                     }}
