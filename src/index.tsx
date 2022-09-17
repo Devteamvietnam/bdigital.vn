@@ -1,28 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-import reportWebVitals from './reportWebVitals';
-import * as serviceWorker from './serviceWorker';
-import { Helmet } from 'react-helmet';
-
-import AppRouter from './routes';
-import { APP_TITLE, APP_DESCRIPTION } from './utils/constants';
+import "bootstrap/dist/css/bootstrap.css";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Helmet>
-      <title>{APP_TITLE}</title>
-      <meta name='description' content={APP_DESCRIPTION} />
-      <link
-        rel='stylesheet'
-        href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
-      />
-      <meta name='viewport' content='initial-scale=1, width=device-width' />
-    </Helmet>
-    <AppRouter />
+    <App />
   </React.StrictMode>
 );
 
@@ -30,4 +19,3 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-serviceWorker.unregister();
