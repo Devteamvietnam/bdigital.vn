@@ -1,24 +1,20 @@
 {
+  "editor.bracketPairColorization.enabled": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "editor.wordWrap": "on",
   "cSpell.words": [
+    "aligh",
     "bdigital",
-    "bdigital.vn",
-    "bgcolor",
-    "browserconfig",
-    "Comming",
     "ddthien",
-    "deepmerge",
-    "flowtype",
     "Matchmove",
     "Parens",
-    "precached",
     "reduxjs",
-    "Showreel",
-    "Swipeable",
-    "webfonts"
+    "showreel",
+    "tsbuildinfo",
+    "updown"
   ]
 }

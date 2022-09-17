@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from "../../assets/img/logo-preview.png";
-import navIcon1 from "../../assets/img/nav-icon1.svg";
-import navIcon2 from "../../assets/img/nav-icon2.svg";
-import navIcon3 from "../../assets/img/nav-icon3.svg";
-import { NavbarLink } from "../styles/NavStyle";
+import React, { useEffect, useState } from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import logo from '../../assets/img/logo-preview.png';
+import navIcon1 from '../../assets/img/nav-icon1.svg';
+import navIcon2 from '../../assets/img/nav-icon2.svg';
+import navIcon3 from '../../assets/img/nav-icon3.svg';
+import { NavbarLink } from '../styles/NavStyle';
 
 export const NavBar = () => {
-  const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -19,17 +18,13 @@ export const NavBar = () => {
       }
     };
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener('scroll', onScroll);
 
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const onUpdateActiveLink = (value: React.SetStateAction<string>) => {
-    setActiveLink(value);
-  };
-
   return (
-    <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+    <Navbar expand="md" className={scrolled ? 'scrolled' : ''}>
       <Container>
         <Navbar.Brand href="/bdigital.vn">
           <img src={logo} alt="Logo" />
