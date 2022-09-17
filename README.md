@@ -161,6 +161,6 @@ I'm a full stack developer...
 import Component from 'my-project';
 
 function App() {
-	return <Component />;
+  return <Component />;
 }
 ```
