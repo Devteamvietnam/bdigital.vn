@@ -17,7 +17,7 @@ Comming soon....
 ## Acknowledgements
 
 - [React](https://reactjs.org)
-- [TypeScipt](https://www.typescriptlang.org)
+- [TypeScript](https://www.typescriptlang.org)
 - [Create-react-app](https://create-react-app.dev)
 
 ## API Reference
@@ -64,9 +64,9 @@ To run this project, you will need to add the following environment variables to
 
 ## Features
 
-- cooming soon..
+- Coming soon..
 
-## Installation Enviroment
+## Installation Environment
 
 In this project using
 
@@ -161,6 +161,6 @@ I'm a full stack developer...
 import Component from 'my-project';
 
 function App() {
-  return <Component />;
+	return <Component />;
 }
 ```
