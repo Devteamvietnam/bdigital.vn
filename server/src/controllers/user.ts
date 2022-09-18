@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import mongoose from 'mongoose';
-import logging from '../config/logging';
+import logging from '../config/log';
 
 import bcryptjs from 'bcryptjs';
 import User from '../models/User';
@@ -75,8 +75,8 @@ const login = (req: Request, res: Response, next: NextFunction) => {
                         } else if (token) {
                             return res.status(200).json({
                                 message: 'Auth successful',
-                                token: token,
-                                user: users[0]
+                                token: token
+                                // user: users
                             });
                         }
                     });
@@ -96,8 +96,8 @@ const getAllUsers = (req: Request, res: Response, next: NextFunction) => {
         .exec()
         .then((users) => {
             return res.status(200).json({
-                users: users,
-                count: users.length
+                users: users
+                // count: users.length
             });
         })
         .catch((error) => {
