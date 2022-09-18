@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import config from '../config/config';
-import logging from '../config/logging';
+import logging from '../config/log';
 import { Request, Response, NextFunction } from 'express';
 
 const NAMESPACE = 'Auth';
