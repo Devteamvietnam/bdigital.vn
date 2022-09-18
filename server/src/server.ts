@@ -36,6 +36,7 @@ const StartServer = () => {
         next();
     });
 
+    /** Parse the body of the request */
     router.use(express.urlencoded({ extended: true }));
     router.use(express.json());
 
