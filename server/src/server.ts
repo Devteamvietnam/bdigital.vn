@@ -36,10 +36,7 @@ const StartServer = () => {
         next();
     });
 
-<<<<<<< HEAD
     /** Parse the body of the request */
-=======
->>>>>>> cf18299e79d20ba339946c882ee675f22e171548
     router.use(express.urlencoded({ extended: true }));
     router.use(express.json());
 
