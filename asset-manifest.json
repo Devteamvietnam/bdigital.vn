@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bdigital.vn/static/css/main.242c8f0c.css",
-    "main.js": "/bdigital.vn/static/js/main.b3c95b25.js",
+    "main.css": "/bdigital.vn/static/css/main.4098c4fe.css",
+    "main.js": "/bdigital.vn/static/js/main.48463b67.js",
     "static/js/787.e97568e5.chunk.js": "/bdigital.vn/static/js/787.e97568e5.chunk.js",
     "static/media/banner-bg.png": "/bdigital.vn/static/media/banner-bg.cc1273af450504afe755.png",
     "static/media/header-img.svg": "/bdigital.vn/static/media/header-img.84bf93eb20488a753440bf83d27db7bb.svg",
@@ -14,12 +14,12 @@
     "index.html": "/bdigital.vn/index.html",
     "static/media/nav-icon1.svg": "/bdigital.vn/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
     "static/media/nav-icon2.svg": "/bdigital.vn/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
-    "main.242c8f0c.css.map": "/bdigital.vn/static/css/main.242c8f0c.css.map",
-    "main.b3c95b25.js.map": "/bdigital.vn/static/js/main.b3c95b25.js.map",
+    "main.4098c4fe.css.map": "/bdigital.vn/static/css/main.4098c4fe.css.map",
+    "main.48463b67.js.map": "/bdigital.vn/static/js/main.48463b67.js.map",
     "787.e97568e5.chunk.js.map": "/bdigital.vn/static/js/787.e97568e5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.242c8f0c.css",
-    "static/js/main.b3c95b25.js"
+    "static/css/main.4098c4fe.css",
+    "static/js/main.48463b67.js"
   ]
 }
