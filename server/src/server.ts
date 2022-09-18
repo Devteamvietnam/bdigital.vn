@@ -2,9 +2,9 @@ import express from 'express';
 import http from 'http';
 import Logging from './library/Logging';
 import mongoose from 'mongoose';
-import { config } from './config/config';
+import config from './config/config';
 
-import authorRoutes from './routes/Author';
+import userRoutes from './routes/user';
 
 const router = express();
 
@@ -53,10 +53,10 @@ const StartServer = () => {
     });
 
     /** Routes */
-    router.use('/authors', authorRoutes);
+    router.use('/api/users', userRoutes);
 
     /** Healthcheck */
-    router.get('/ping', (req, res, next) => res.status(200).json({ hello: 'world' }));
+    router.get('/', (req, res, next) => res.status(200).json({ hello: `Hi, I'm Bdigital Server Restful API` }));
 
     /** Error handling */
     router.use((req, res, next) => {
