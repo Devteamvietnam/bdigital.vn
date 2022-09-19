@@ -1,9 +1,0 @@
-{
-  "short_name": "Bdigital.vn",
-  "name": "The VFX UI",
-  "icons": [],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}
